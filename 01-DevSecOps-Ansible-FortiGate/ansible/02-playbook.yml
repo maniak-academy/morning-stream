@@ -11,14 +11,14 @@
     - secrets.yml
 
   tasks:
-      - name: Define a Jucicehop Web Address
+      - name: Define a Juiceshop Web Address
         fortios_firewall_address:
           vdom: "{{ vdom }}"
           access_token: "{{ fortigate_token }}"
           state: "present"
           firewall_address:
             name: "web-add-group"
-            subnet: "20.1.1.5 255.255.255.255"
+            subnet: "20.1.1.14 255.255.255.255"
             comment: "Created by Ansible"
             
       - name: Create Firewall Policy for JucieShop

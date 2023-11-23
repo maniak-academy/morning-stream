@@ -2,10 +2,10 @@
 DevSecOps with Fortinet
 
 ## Agenda 
-1. Deploy lab environment
+1. Deploy lab Environment
 2. DevSecOps with Fortinet
 3. Create your first ansible playbook
-
+4. Build and Secure and Application
 
 ### Prerequsists
 * Install Terraform to deploy lab
