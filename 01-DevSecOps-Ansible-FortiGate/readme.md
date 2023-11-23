@@ -130,3 +130,27 @@ fortigate_token=secrets.yml
 
 ## Run the playbook to build outbound access 
 ansible-playbook -i hosts 00-playbook.yml --ask-vault-pass
+
+
+## Run the playbook to build outbound access 
+ansible-playbook -i hosts 01-playbook.yml --ask-vault-pass
+
+## Spin up JuiceShop App
+Now we can install juceishop because its to go out to the interent to download the docker
+
+cd terraform folder and uncomment the main.tf and variables.tf lines
+
+next initiate terraform and apply
+
+```
+terraform init
+terraform apply -auto-approve
+```
+
+## got back into the Ansible Folder
+Build a policy to allow access to the juiceshop web app, note you will need the internal IP
+
+ansible-playbook -i hosts 02-playbook.yml --ask-vault-pass
+
+## play with jinja2 templating
+ansible-playbook -i hosts 03-playbook.yml --ask-vault-pass
